@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puisi-Puisi Senyap</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      background-color: #800000;
+      margin: 0;
+      padding: 0;
+      color: #fff8f0;
+    }
+    header {
+      background-color: #4d0000;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #fff8f0;
+    }
+    .container {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .puisi-title {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      cursor: pointer;
+      color: #ffddcc;
+    }
+    .puisi-title:hover {
+      text-decoration: underline;
+    }
+    .puisi-content {
+      display: none;
+      margin-bottom: 2rem;
+      white-space: pre-wrap;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Puisi-Puisi Senyap</h1>
+  </header>
+
+  <div class="container">
+    <div onclick="togglePuisi('puisi1')" class="puisi-title">1. Pengamat Kesepian, Tertelan Kesialan</div>
+    <div id="puisi1" class="puisi-content">
+Suara teriakan sanubari bergegas menulikan telinga serta membutakan mata hati,
+Kala sunyi berbunyi lebih nyaring daripada aksi-aksi patah hati, ia menyadari satu duri.
+
+Duri itu ia rengkuh dengan hati-hati,
+Barangkali tetes darah yang memerah bisa membuat sepi nya merekah ruah.
+
+Dahulu muda-mudi menyendiri,
+Sebelum ia menapaki ruang misteri guna menyelamatkan mereka dari sepi.
+
+Entah terjebak sunyi maupun merengkuh duri,
+Segalanya untuk mereka yang dicinta.
+Sungguh, ironi cinta itu tak sampai pada si empunya.
+
+Cinta yang ia tebar,
+Menemuinya dalam ingkar.
+
+Sial.
+Sungguh sial.
+
+Terpilihnya kesialan ini ternyata mimpi tanpa akhir yang ia nikmati.
+Seperti gunung yang menampung lava meski mengutuk panas,
+Seperti daun yang jatuh meski ingin bertahan kukuh.
+    </div>
+
+    <div onclick="togglePuisi('puisi2')" class="puisi-title">2. Pelukis Sendu, Merindu Pilu</div>
+    <div id="puisi2" class="puisi-content">
+Dirinyakah penyebab gemetar jemarimu?
+
+Tangismu lebih basah dari gerimis, menjatuhiku di setiap langkah-langkah.
+
+Kuas merusak jiwamu melebihi asa yang masih berusaha menyelamatkanmu dari semu.
+
+Bahkan cintaku tak cukup mampu mengeluarkanmu dari duniamu yang jemu.
+
+Tetapi, sadarkah engkau bahwa surga takkan membuatmu celaka?
+
+Apa yang kau anggap surga, nyatanya penuh derita. 
+
+Yang kau puja jelita nyatanya membuat lukamu menganga.
+
+Benarkah putihnya kanvas membutakanmu dari birunya langit?
+
+Benarkah engkau menghindari sadar, dan sebab itu keberadaanku dari pandangmu berpendar?
+
+Asaku hanya satu, ialah kata-kataku yang mengudara bisa melindungimu meski kau membisu.
+    </div>
+  </div>
+
+  <script>
+    function togglePuisi(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
