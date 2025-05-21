@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kumpulan Puisi</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Times New Roman', serif;
+      background-color: maroon;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .container {
+      width: 90%;
+      max-width: 800px;
+      text-align: center;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+    .poem {
+      display: none;
+    }
+    .poem.active {
+      display: block;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      white-space: pre-wrap;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .nav-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 1rem;
+      box-sizing: border-box;
+    }
+    .nav-buttons button {
+      background: white;
+      color: maroon;
+      border: none;
+      font-size: 2rem;
+      padding: 0.2rem 0.8rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-buttons">
+    <button id="prev">&larr;</button>
+    <button id="next">&rarr;</button>
+  </div>
+  <div class="container">
+    <div class="poem active">
+      <h1>Pengamat Kesepian, Tertelan Kesialan</h1>
+      <p>
+Suara teriakan sanubari bergegas menulikan telinga serta membutakan mata hati,
+Kala sunyi berbunyi lebih nyaring daripada aksi-aksi patah hati, ia menyadari satu duri.
+
+Duri itu ia rengkuh dengan hati-hati,
+Barangkali tetes darah yang memerah bisa membuat sepinya merekah ruah.
+
+Dahulu muda-mudi menyendiri,
+Sebelum ia menapaki ruang misteri guna menyelamatkan mereka dari sepi.
+
+Entah terjebak sunyi maupun merengkuh duri,
+Segalanya untuk mereka yang dicinta.
+Sungguh, ironi cinta itu tak sampai pada si empunya.
+
+Cinta yang ia tebar,
+Menemuinya dalam ingkar.
+
+Sial.
+Sungguh sial.
+
+Terpilihnya kesialan ini ternyata mimpi tanpa akhir yang ia nikmati.
+Seperti gunung yang menampung lava meski mengutuk panas,
+Seperti daun yang jatuh meski ingin bertahan kukuh.
+      </p>
+    </div>
+    <div class="poem">
+      <h1>Pelukis Sendu, Merindu Pilu</h1>
+      <p>
+Dirinyakah penyebab gemetar jemarimu?
+
+Tangismu lebih basah dari gerimis, menjatuhiku di setiap langkah-langkah.
+
+Kuas merusak jiwamu melebihi asa yang masih berusaha menyelamatkanmu dari semu.
+
+Bahkan cintaku tak cukup mampu mengeluarkanmu dari duniamu yang jemu.
+
+Tetapi, sadarkah engkau bahwa surga takkan membuatmu celaka?
+
+Apa yang kau anggap surga, nyatanya penuh derita. 
+
+Yang kau puja jelita nyatanya membuat lukamu menganga.
+
+Benarkah putihnya kanvas membutakanmu dari birunya langit?
+
+Benarkah engkau menghindari sadar, dan sebab itu keberadaanku dari pandangmu berpendar?
+
+Asaku hanya satu, ialah kata-kataku yang mengudara bisa melindungimu meski kau membisu.
+      </p>
+    </div>
+    <div class="poem">
+      <h1>Mahakarya Duka</h1>
+      <p>
+Sepasang kaki yang telah mati—berjalan di atas kerenggangan jiwa satu manusia.
+
+Terpasung di bawah mendung,
+Tertanam saat surya tenggelam.
+Meninggalkan segalanya di dunia—menyisakan sebuah mahakarya duka.
+
+Duka...
+Pintu mana yang akan terbuka? 
+Pintu bahagia—atau putus asa?
+
+Duka...
+Apa yang akan kau beri sebagai balasan?
+Apakah hanya rangkaian tangisan tak berkesudahan?
+
+Duka...
+Pemberian Tuhan yang penuh sayang,
+Bagaimana cara menerimamu tanpa mengeringkan jiwa kami hingga gersang?
+
+Hawa keberadaan yang perlahan menghilang,
+Ingatan demi ingatan yang kemudian melayang.
+
+Tetapi...
+Hanya itu yang kami punya.
+Hanya sebuah ratap pada yang tercinta.
+
+Satu—dan kau merenggut segalanya, duka.
+      </p>
+    </div>
+  </div>
+  <script>
+    const poems = document.querySelectorAll(".poem");
+    let current = 0;
+
+    document.getElementById("next").addEventListener("click", () => {
+      poems[current].classList.remove("active");
+      current = (current + 1) % poems.length;
+      poems[current].classList.add("active");
+    });
+
+    document.getElementById("prev").addEventListener("click", () => {
+      poems[current].classList.remove("active");
+      current = (current - 1 + poems.length) % poems.length;
+      poems[current].classList.add("active");
+    });
+  </script>
+</body>
+</html>
