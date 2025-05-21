@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -7,21 +8,16 @@
   <style>
     body {
       margin: 0;
+      padding: 0;
       font-family: 'Times New Roman', serif;
       background-color: maroon;
       color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      overflow: hidden;
     }
     .container {
-      width: 90%;
       max-width: 800px;
+      margin: auto;
+      padding: 2rem 1rem;
       text-align: center;
-      padding: 2rem;
-      box-sizing: border-box;
     }
     .poem {
       display: none;
@@ -30,40 +26,40 @@
       display: block;
     }
     h1 {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       margin-bottom: 1rem;
     }
     p {
       white-space: pre-wrap;
-      font-size: 1.1rem;
+      font-size: 1rem;
       line-height: 1.6;
     }
     .nav-buttons {
-      position: absolute;
-      top: 50%;
-      width: 100%;
       display: flex;
       justify-content: space-between;
-      transform: translateY(-50%);
-      padding: 0 1rem;
-      box-sizing: border-box;
+      margin-top: 2rem;
     }
     .nav-buttons button {
       background: white;
       color: maroon;
       border: none;
-      font-size: 2rem;
-      padding: 0.2rem 0.8rem;
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem;
       cursor: pointer;
       border-radius: 5px;
+    }
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.3rem;
+      }
+      .nav-buttons button {
+        font-size: 1.2rem;
+        padding: 0.4rem 0.8rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="nav-buttons">
-    <button id="prev">&larr;</button>
-    <button id="next">&rarr;</button>
-  </div>
   <div class="container">
     <div class="poem active">
       <h1>Pengamat Kesepian, Tertelan Kesialan</h1>
@@ -146,6 +142,10 @@ Hanya sebuah ratap pada yang tercinta.
 
 Satu—dan kau merenggut segalanya, duka.
       </p>
+    </div>
+    <div class="nav-buttons">
+      <button id="prev">&larr;</button>
+      <button id="next">&rarr;</button>
     </div>
   </div>
   <script>
